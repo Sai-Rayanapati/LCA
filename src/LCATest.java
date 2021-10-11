@@ -16,21 +16,21 @@ public class LCATest {
         tree.root.right.right = new LCA.Node(7);
 
         // Nodes with same parent node
-        assertEquals("2", tree.findLCA(4,5));
+        assertEquals(2, tree.findLCA(4,5));
 
         //Nodes with different parent nodes
-        assertEquals("1", tree.findLCA(4,6));
+        assertEquals(1, tree.findLCA(4,6));
 
         // Nodes with different depths
-        assertEquals("1", tree.findLCA(3,4));
+        assertEquals(1, tree.findLCA(3,4));
 
         //Nodes as parent and child
-        assertEquals("2", tree.findLCA(2,4));
+        assertEquals(2, tree.findLCA(2,4));
 
         // Nodes not present
-        assertEquals("Node not present!", tree.findLCA(2,8));
+        assertEquals(-1, tree.findLCA(2,8));
 
         //Same Nodes
-        assertEquals("1", tree.findLCA(1,1));
+        assertEquals(1, tree.findLCA(1,1));
     }
 }

@@ -30,13 +30,12 @@ public class LCA {
             return false;
         }
 
-        String findLCA(int n1, int n2){
+        int findLCA(int n1, int n2){
             if(!nodePresent(root,n1)||!nodePresent(root,n2))
             {
-                return "Node not present!";
+                return -1;
             }
-            String data= Integer.toString(LCA(root, n1, n2).data) ;
-            return data;
+            return LCA(root, n1, n2).data;
         }
 
         Node LCA(Node root, int n1, int n2)
