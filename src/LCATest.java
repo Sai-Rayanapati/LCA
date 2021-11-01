@@ -7,6 +7,10 @@ public class LCATest {
     @Test
     public void LCA() {
         LCA.BinaryTree tree = new LCA.BinaryTree();
+
+        // Root node is null
+        assertEquals(-1,tree.findLCA(1,2));
+
         tree.root = new LCA.Node(1);
         tree.root.left = new LCA.Node(2);
         tree.root.right = new LCA.Node(3);
